@@ -1,5 +1,10 @@
+// https://docs.expo.io/versions/v22.0.0/guides/configuration.html
 {
   "expo": {
-    "sdkVersion": "22.0.0"
+    "sdkVersion": "22.0.0",
+    "name": "EITA Mobile",
+    "slug": "eita-mobile",
+    "icon": "./icon.png",
+    "version": "0.1-alpha"
   }
 }

@@ -1,13 +1,28 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { Alert, Button, Image, StyleSheet, Text, View } from 'react-native';
 
 export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
-        <Text>Changes you make will automatically reload.</Text>
-        <Text>Shake your phone to open the developer menu.</Text>
+        <Image
+          source={require('./img/logo.png')}
+          style={styles.logo}
+        />
+        <Text style={styles.titletext}>
+          EITA Mobile
+        </Text>
+        <Button
+          onPress={() => { Alert.alert('You tapped the button!')}}
+          title="Press Me"
+        />
+        <Button
+          onPress={() => { Alert.alert('You tapped the button!')}}
+          title="About"
+        />
+        <Text style={styles.text}>
+          Prototyping components and interactions for iOS and Android.
+        </Text>
       </View>
     );
   }
@@ -16,8 +31,22 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    paddingTop: '10%',
+    paddingBottom: '5%'
   },
+  logo: {
+    flex: 1,
+    maxWidth: '50%',
+    resizeMode: 'contain',
+    alignSelf: 'center',
+    aspectRatio: 1,
+  },
+  titletext: {
+    fontSize: 36,
+    textAlign: 'center',
+  },
+  text: {
+    fontSize: 16,
+    textAlign: 'center'
+  }
 });
